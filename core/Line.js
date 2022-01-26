@@ -13,8 +13,8 @@ var Line = function (key, value) {
     }
 
     this._isComment = isComment;
-    this._key = key ? key.trim() : '';
-    this._value = value ? value.trim() : '';
+    this._key = key || '';
+    this._value = value || '';
 
 }
 
