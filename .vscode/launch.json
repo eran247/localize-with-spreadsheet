@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug",
+        "program": "${workspaceFolder}/app.js",
+        "runtimeArgs": ["--inspect"],
+        "skipFiles": ["<node_internals>/**"]
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Update",
+        "program": "${workspaceFolder}/update.js",
+        "runtimeArgs": ["--inspect"],
+        "skipFiles": ["<node_internals>/**"]
+      }
+    ]
+  }

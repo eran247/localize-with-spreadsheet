@@ -1,64 +1,61 @@
-var COMMENT_STARTERS = ['//', '#'];
+const COMMENT_STARTERS = ['//', '#'];
 
-var Line = function (key, value) {
-    if (!key) {
-        key = '';
-    }
-    key = key.toString();
-
-    var isComment = Line.checkIsComment(key);
-
-    if (isComment) {
-        key = Line.normalizeComment(key);
-    }
-
-    this._isComment = isComment;
-    this._key = key || '';
+class Line {
+  constructor(key, value) {
+    this._isComment = false;
+    this._key = key ? key.toString() : '';
     this._value = value || '';
 
-}
+    if (this._key) {
+      this._isComment = Line.checkIsComment(this._key);
+      if (this._isComment) {
+        this._key = Line.normalizeComment(this._key);
+      }
+    }
+  }
 
-Line.checkIsComment = function (val) {
-    for (var i = 0; i < COMMENT_STARTERS.length; i++) {
-        var commentStarter = COMMENT_STARTERS[i];
-        if (val.indexOf(commentStarter) === 0) {
-            return true;
-        }
+  static checkIsComment(val) {
+    for (let i = 0; i < COMMENT_STARTERS.length; i++) {
+      const commentStarter = COMMENT_STARTERS[i];
+      if (val.indexOf(commentStarter) === 0) {
+        return true;
+      }
     }
     return false;
-};
+  }
 
-Line.normalizeComment = function (val) {
-    for (var i = 0; i < COMMENT_STARTERS.length; i++) {
-        var commentStarter = COMMENT_STARTERS[i];
-        var index = val.indexOf(commentStarter);
-        if (index === 0) {
-            var normalized = val.substr(commentStarter.length, val.length - commentStarter.length);
-            normalized = normalized.trim();
-            return normalized;
-        }
+  static normalizeComment(val) {
+    for (let i = 0; i < COMMENT_STARTERS.length; i++) {
+      const commentStarter = COMMENT_STARTERS[i];
+      const index = val.indexOf(commentStarter);
+      if (index === 0) {
+        let normalized = val.substr(commentStarter.length, val.length - commentStarter.length);
+        normalized = normalized.trim();
+        return normalized;
+      }
     }
     return val;
-};
+  }
 
-Line.prototype.isEmpty = function () {
+  isEmpty() {
     return !this._isComment && !this._key;
-};
+  }
 
-Line.prototype.isComment = function () {
+  isComment() {
     return this._isComment;
-};
+  }
 
-Line.prototype.getComment = function () {
+  getComment() {
     return this._key;
-};
+  }
 
-Line.prototype.getKey = function () {
+  getKey() {
     return this._key;
-};
+  }
 
-Line.prototype.getValue = function () {
+  getValue() {
     return this._value;
-};
+  }
+}
 
 module.exports = Line;

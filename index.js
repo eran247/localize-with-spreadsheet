@@ -1,4 +1,4 @@
-const GSReader = require('./core/LineReader.js').GS;
+const GSReader = require('./core/GSReader.js').GS;
 const FileWriter = require('./core/Writer.js').File;
 const Transformer = require('./core/Transformer.js');
 
