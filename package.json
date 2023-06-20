@@ -1,20 +1,20 @@
 {
   "author": {
-    "name": "Breahna Constantin",
-    "email": "constantin.breahna@ebs-integrator.com"
+    "name": "Eran Jalink",
+    "email": "eran.jalink@hello247.nl"
   },
-  "name": "localize-with-spreadsheet-jambl",
-  "description": "Create a localization file in Android or iOS format from a Google Spreadsheet. Version 3",
-  "version": "3.0.0",
-  "homepage": "https://github.com/ebs-integrator/localize-with-spreadsheet",
+  "name": "localize-with-spreadsheet-h247",
+  "description": "Create a localization file in Android or iOS format from a Google Spreadsheet.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/eran247/localize-with-spreadsheet",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ebs-integrator/localize-with-spreadsheet.git"
+    "url": "git@github.com:eran247/localize-with-spreadsheet.git"
   },
   "main": "index.js",
   "dependencies": {
     "google-spreadsheet": "3.1.15",
-    "localize-with-spreadsheet": "github:ebs-integrator/localize-with-spreadsheet",
+    "localize-with-spreadsheet-h247": "github:eran247/localize-with-spreadsheet",
     "mkpath": "0.1.0",
     "q": "0.9.2"
   },

@@ -1,4 +1,5 @@
-var Localize = require("localize-with-spreadsheet");
+// var Localize = require("localize-with-spreadsheet");
+var Localize = require("./index");
 
 const credentials = {
   type: "service_account",
@@ -19,29 +20,29 @@ Localize.fromGoogleSpreadsheet(credentials, "1XXcO5KG_tlmilPG8sX9I-EvIkAs8wqFWuU
     localizer.setKeyCol("String ID");
     localizer.setDefaultLanguage('en')
 
-    localizer.save("Base.lproj/Localizable.strings", { valueCol: "English", format: "ios" });
-    localizer.save("zh.lproj/Localizable.strings", { valueCol: "Chinese S", format: "ios" });
-    localizer.save("zh-tw.lproj/Localizable.strings", { valueCol: "Chinese T", format: "ios" });
-    localizer.save("fr.lproj/Localizable.strings", { valueCol: "French", format: "ios" });
-    localizer.save("de.lproj/Localizable.strings", { valueCol: "German", format: "ios" });
-    localizer.save("it.lproj/Localizable.strings", { valueCol: "Italian", format: "ios" });
-    localizer.save("ja.lproj/Localizable.strings", { valueCol: "Japanese", format: "ios" });
-    localizer.save("ko.lproj/Localizable.strings", { valueCol: "Korean", format: "ios" });
-    localizer.save("pt.lproj/Localizable.strings", { valueCol: "Portuguese", format: "ios" });
-    localizer.save("ru.lproj/Localizable.strings", { valueCol: "Russian", format: "ios" });
-    localizer.save("es.lproj/Localizable.strings", { valueCol: "Spanish", format: "ios" });
+    localizer.save("Test/Base.lproj/Localizable.strings", { valueCol: "English", format: "ios" });
+    localizer.save("Test/zh.lproj/Localizable.strings", { valueCol: "Chinese S", format: "ios" });
+    localizer.save("Test/zh-tw.lproj/Localizable.strings", { valueCol: "Chinese T", format: "ios" });
+    localizer.save("Test/fr.lproj/Localizable.strings", { valueCol: "French", format: "ios" });
+    localizer.save("Test/de.lproj/Localizable.strings", { valueCol: "German", format: "ios" });
+    localizer.save("Test/it.lproj/Localizable.strings", { valueCol: "Italian", format: "ios" });
+    localizer.save("Test/ja.lproj/Localizable.strings", { valueCol: "Japanese", format: "ios" });
+    localizer.save("Test/ko.lproj/Localizable.strings", { valueCol: "Korean", format: "ios" });
+    localizer.save("Test/pt.lproj/Localizable.strings", { valueCol: "Portuguese", format: "ios" });
+    localizer.save("Test/ru.lproj/Localizable.strings", { valueCol: "Russian", format: "ios" });
+    localizer.save("Test/es.lproj/Localizable.strings", { valueCol: "Spanish", format: "ios" });
     
-    localizer.save("android/Base.lproj/Localizable.strings", { valueCol: "English", format: "android" });
-    localizer.save("android/zh.lproj/Localizable.strings", { valueCol: "Chinese S", format: "android" });
-    localizer.save("android/zh-tw.lproj/Localizable.strings", { valueCol: "Chinese T", format: "android" });
-    localizer.save("android/fr.lproj/Localizable.strings", { valueCol: "French", format: "android" });
-    localizer.save("android/de.lproj/Localizable.strings", { valueCol: "German", format: "android" });
-    localizer.save("android/it.lproj/Localizable.strings", { valueCol: "Italian", format: "android" });
-    localizer.save("android/ja.lproj/Localizable.strings", { valueCol: "Japanese", format: "android" });
-    localizer.save("android/ko.lproj/Localizable.strings", { valueCol: "Korean", format: "android" });
-    localizer.save("android/pt.lproj/Localizable.strings", { valueCol: "Portuguese", format: "android" });
-    localizer.save("android/ru.lproj/Localizable.strings", { valueCol: "Russian", format: "android" });
-    localizer.save("android/es.lproj/Localizable.strings", { valueCol: "Spanish", format: "android" });
+    localizer.save("Test/android/Base.lproj/Localizable.strings", { valueCol: "English", format: "android" });
+    localizer.save("Test/android/zh.lproj/Localizable.strings", { valueCol: "Chinese S", format: "android" });
+    localizer.save("Test/android/zh-tw.lproj/Localizable.strings", { valueCol: "Chinese T", format: "android" });
+    localizer.save("Test/android/fr.lproj/Localizable.strings", { valueCol: "French", format: "android" });
+    localizer.save("Test/android/de.lproj/Localizable.strings", { valueCol: "German", format: "android" });
+    localizer.save("Test/android/it.lproj/Localizable.strings", { valueCol: "Italian", format: "android" });
+    localizer.save("Test/android/ja.lproj/Localizable.strings", { valueCol: "Japanese", format: "android" });
+    localizer.save("Test/android/ko.lproj/Localizable.strings", { valueCol: "Korean", format: "android" });
+    localizer.save("Test/android/pt.lproj/Localizable.strings", { valueCol: "Portuguese", format: "android" });
+    localizer.save("Test/android/ru.lproj/Localizable.strings", { valueCol: "Russian", format: "android" });
+    localizer.save("Test/android/es.lproj/Localizable.strings", { valueCol: "Spanish", format: "android" });
   }
 );
 
